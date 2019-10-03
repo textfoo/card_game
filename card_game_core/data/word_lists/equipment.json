@@ -1,0 +1,42 @@
+{
+    "weapons" :[
+        "Staff",
+        "Club",
+        "Rod",
+        "Wand",
+        "Blade",
+        "Dagger",
+        "Foil",
+        "Scimitar",
+        "Cleaver",
+        "Lance",
+        "Scythe",
+        "Twig",
+        "Scepter",
+        "Crossbow"
+    ],
+    "armor": [
+        "Shield",
+        "Buckler",
+        "Safeguard",
+        "Cloak", 
+        "Tabard",
+        "Mantle", 
+        "Shawl", 
+        "Plate",
+        "Gauntlet"
+    ],
+    "magic" : [
+        "Seal",
+        "Mirror", 
+        "Amulet",
+        "Cod Piece",
+        "Cup", 
+        "Ring", 
+        "Hairpin",
+        "Crown",
+        "Necklace",
+        "Armband",
+        "Belt"
+    ]
+}

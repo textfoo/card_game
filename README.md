@@ -13,38 +13,22 @@ The deck consists of **heros**, **dungeons** (representing undistributed/unresol
 #### Heros and Citadels
 
 + Unholy City of Necromancy Theme
-  + Citadel Leader is a Lich
-  + Common heros themed as skeletons, zombies - necromancer stuff
-    + Cheaper heros but allows the player to combine them later for more powerful protectors
 + Holy City of Cleric Theme
-  + Citadel Leader is a Cleric/Paladin
-  + Common heros themed as knights, holy warriors, the all really despise the Unholy City of Necromancy Theme
-    + More expensive
 + Natural City of Druid Theme
-  + Citadel Leader is a Druid/Nature based Creature
-    + Fairies, animals, trees
-    + Doesn't need a lot of gold
 + Industrial City of Dwarfs & Goblins
-  + Cital Leader(s) are an alliance of Dwarfs and Goblins
-    + Goblins cheapest, Dwafs initially more expensive
-      + Goblins can upgrade equipment to make sweet ass goblin mechs.
-      + Dwarven teams(?)
 
 #### Dungeons
 
-A dungeon is a vehicle meant to control the pace of the game and also allow players to adjust their relative power by finding equipment. In order to retrieve equipment from a dungeon a player must take a risk of leaving inn exposed by having either all of their heros or a chosen number to venture into a dungeon to **resolve** it. Resolving a dungeon awards the _player_ with a peice of equipment. All dungeons have a difficulty raiting corrolated with their survey cost.
-
-A dungeon is laid during the same phase of a player's turn alongside hero placement.
+A dungeon is a vehicle meant to control the pace of the game and also allow players to adjust their relative power by obtaining equipment. By having either all of their heros or a chosen number to venture into a dungeon to **resolve** it they can attempt to retrieve the equipment inside.
 
 #### Resolving a Dungeon
 
-A dungeons difficulty rating can be broken down by:
+Dungons are guagued by a difficulty rating, some dungons are easier offering early heros access to early buffs and others more difficult - possibly posing a threat to the heros an inkeeper chooses to send in.
 
-+ Number of turns it takes to resolve
-+ Overall constitution of hero(s) within the dungon
-+ Special attributes of a dungeon (themed with award)
+_scenario_:
+> Inkeeper 'Bob' plays a dungeon card by paying the required fee of 2 gold. The dungeon's difficulty verbiage stipulates that any heros sent in will take 3 posion damage directly to their constitution while they're inside the dungeon. The default resolution time for any dungeon is 1 turn (unless otherwise stated) implying the hero will need to be able to take 3 damage. His Dwarf Barbarian of 12 constitution can last up to 4 turns insde the dungeon before he collapses.
 
-If a sent hero can resolve a dungon, it is considered _tapped_ and not available for the opponent's attack phase.
+A hero engaged in attempting to resolve a dungeon is tapped and not available to defend upon an opponent's attack phase.
 
 _An opponent can attempt to block the resolution of a dungeon in a few ways._
 
@@ -95,7 +79,6 @@ Necron house with no bonuses earns 1 gold per turn. The cheapest hero in Player 
 ### Third Turn
 
 **Player 1** Fields a dungeon by using their 1 gold income on paying the survey cost. Since they know that Player 1's only available hero is caught up resolving a dungeon and cannot defend, they choose to attack Player 1's inn directly dealing 1 damage and ends their turn.
-
 
 //todo: finish
 

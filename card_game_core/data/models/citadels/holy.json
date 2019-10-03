@@ -1,0 +1,10 @@
+{
+    "name" : "Holy City",
+    "hero_types" : [
+        "Squire",
+        "Knight",
+        "Paladin"
+    ],
+    "gold_per_turn" : 1,
+    "hp" : 30
+}

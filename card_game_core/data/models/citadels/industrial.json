@@ -1,0 +1,10 @@
+{
+    "name" : "Industrial City",
+    "hero_types" : [
+        "Dwarf",
+        "Goblin",
+        "Mechanical"
+    ],
+    "gold_per_turn" : 0,
+    "hp" : 0
+}

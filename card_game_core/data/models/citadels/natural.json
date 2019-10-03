@@ -1,0 +1,10 @@
+{
+    "name" : "Natural City",
+    "hero_types" : [
+        "Fairy",
+        "Druid",
+        "Merefolk"
+    ],
+    "gold_per_turn" : 1,
+    "hp" : 30
+}

@@ -1,0 +1,10 @@
+{
+    "name" : "Skeleton",
+    "description" : "Considered free, he already paid his price",
+    "cost" : 0,
+    "attack" : 1,
+    "constitution" : 2,
+    "armor" : 1, 
+    "type" : "Undead", 
+    "spells" : []
+}

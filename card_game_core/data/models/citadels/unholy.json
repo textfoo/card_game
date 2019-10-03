@@ -1,0 +1,10 @@
+{
+    "name" : "Unholy City",
+    "hero_types" : [
+        "Undead", 
+        "Warlock",
+        "Lich"
+    ],
+    "gold_per_turn" : 1,
+    "hp" : 30
+}

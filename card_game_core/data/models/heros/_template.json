@@ -1,0 +1,10 @@
+{
+    "name" : "",
+    "description" : "", 
+    "cost" : 0,
+    "attack" : 0,
+    "constitution" : 0, 
+    "armor" : 0,
+    "type" : "",
+    "spells" : []
+}
