@@ -1,0 +1,36 @@
+{
+    "holy_names" : [
+        "Bolvar",
+        "Darian",
+        "Eldur",
+        "Glordrum",
+        "Haydnward",
+        "Lancelot",
+        "Leokul",
+        "Ironhand",
+        "Roland",
+        "Sammuel",
+        "Stronghammer",
+        "Wilhelm",
+        "Whiteshield"
+    ],
+    "unholy_names" : [
+        "Elfsbane",
+        "Lor",
+        "Mograine",
+        "Savin",
+        "Senturus",
+        "Vicward",
+        "Zandros"
+    ],
+    "neutral" :[
+        "Noah",
+        "Liam",
+        "Mason",
+        "Jacob",
+        "William",
+        "Ethan",
+        "James",
+        "Alexander"
+    ]
+}

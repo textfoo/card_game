@@ -1,0 +1,15 @@
+{
+  "name": "card_game_core",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./app/index.js",
+  "scripts": {
+    "test": "jest --watchAll",
+    "setup" : "nodemon ./data/setup.js"
+  },
+  "author": "textfoo",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
