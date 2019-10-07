@@ -1,0 +1,39 @@
+{
+    "types": [
+        {
+            "type": "unholy",
+            "names": [
+                "Skeleton",
+                "Warlock",
+                "Lich"
+            ]
+        },
+        {
+            "type": "holy",
+            "names": [
+                "Knight",
+                "Squire",
+                "Paladin",
+                "Angel",
+                "Cleric"
+            ]
+        },
+        {
+            "type": "natural",
+            "names": [
+                "Druid",
+                "Ent",
+                "Dragon",
+                "Firbolg"
+            ]
+        },
+        {
+            "type": "industry",
+            "names": [
+                "Dwarf",
+                "Goblin",
+                "Mech"
+            ]
+        }
+    ]
+}

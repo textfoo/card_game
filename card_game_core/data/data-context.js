@@ -9,11 +9,11 @@ const proper = require('../data/word_lists/proper-nouns.json');
 const adjs = require('../data/word_lists/adjectives.json'); 
 const equip = require('../data/word_lists/equipment.json');
 const spells = require('../data/word_lists/spells.json');
-
+const heros = require('../data/word_lists/heros.json')
 
 let context = {}; 
 
-module.exports.init = async() => {
+module.exports.init = () => {
     try { 
         console.log(`data_context | init | path: ${_path}`);
     }catch(error) {
@@ -21,15 +21,43 @@ module.exports.init = async() => {
     }
 }
 
-module.exports.buildReferenceFile = async() => {
+module.exports.buildReferenceFile = () => {
     try {
-        const randomEquipment = await this.generateEquipment(30); 
+        const randomEquipment = this.generateEquipment(100); 
     }catch(error) {
         console.log(`data_context | buildResource | error : ${error}`);
     }
 }
 
-module.exports.generateEquipment = async(number) => {
+module.exports.generateHeros = (type, number) => {
+    try {
+        let response = []; 
+        console.log(`data_context | generateHeros | type: ${type}, number: ${number}`);
+        console.log(JSON.stringify(heros));
+        let container = heros.types.filter((x) => {
+            return x.type === type;
+        });
+
+        console.log(`names ${JSON.stringify(container)}`);
+        for(var i =1; i < number; i++){ 
+            let cost = Math.ceil(rand.generateRand([1, 8]) * (i / number));
+            response.push({
+                cost : cost, 
+                type : container[0].names[rand.generateRand([0, container[0].names.length - 1])],
+                attack : Math.ceil(rand.generateRand([0, cost])),
+                armor : Math.floor(rand.generateRand([0, cost / 2])),
+                conn : Math.floor(rand.generateRand([1, cost]))
+            });
+            //console.log(`cost : ${cost} | attack : ${attack} | conn : ${conn} | armor : ${armor} |type : ${type}`);
+        }
+        return response;
+        
+    }catch(error) {
+        console.log(`data_context | generateHeros | error : ${error}`);
+    }
+}
+
+module.exports.generateEquipment = (number) => {
     try {
         response = []; 
         console.log(`data_context | generateEquipment | number: ${number}`);
@@ -80,7 +108,7 @@ module.exports.generateEquipmentName = (stats) => {
     return response;
 }
 
-module.exports.generateDungeons = async(number) => {
+module.exports.generateDungeons = (number) => {
     try {
         number = number || 0; 
         for(var i =0; i < number; i++) {
