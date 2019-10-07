@@ -5,6 +5,7 @@ const path = require('path');
 const _path = path.join(__dirname); 
 const rand = require('../engine/random'); 
 
+const proper = require('../data/word_lists/proper-nouns.json');
 const adjs = require('../data/word_lists/adjectives.json'); 
 const equip = require('../data/word_lists/equipment.json');
 const spells = require('../data/word_lists/spells.json');
@@ -30,19 +31,53 @@ module.exports.buildReferenceFile = async() => {
 
 module.exports.generateEquipment = async(number) => {
     try {
+        response = []; 
         console.log(`data_context | generateEquipment | number: ${number}`);
         number = number || 0; 
         for(var i =0; i < number; i++) {
-            let {cost, attackBonus, connBonus, defBonus } = 0; 
-            cost = Math.ceil(rand.generateRand([1, 8]) * (i / number));
-            attackBonus = Math.ceil(rand.generateRand([0, cost]) * (i /number));
-            connBonus = Math.ceil(rand.generateRand([0, cost]) * ((i /number) /2));
-            armorBonus = Math.ceil(rand.generateRand([0, cost]) * ((i /number) /2));
-            console.log(`| cost : ${cost} | attackBonus: ${attackBonus}, connBonus: ${connBonus}, armorBonus: ${armorBonus} |`);
+            let stats = this.generateEquipmentStats(i, number); 
+            let name = this.generateEquipmentName(stats); 
+            response.push({'name' : name, 'stats' : stats}); 
+            //console.log(`| value : ${stats.value} | attackBonus: ${stats.attackBonus}, connBonus: ${stats.connBonus}, armorBonus: ${stats.armorBonus}| name: ${name}`);
         }
+        return response;
     }catch(error){
         console.log(`data_context | generateEquipment | error : ${error}`);
     }
+}
+
+module.exports.generateEquipmentStats = (i, number) => {
+    value = Math.ceil(rand.generateRand([1, 8]) * (i / number));
+    return { 
+        value : value,
+        attackBonus :  Math.ceil(rand.generateRand([0, value]) * ((i /number) /rand.generateRand([1, 2]))),
+        connBonus : Math.ceil(rand.generateRand([0, value]) * ((i /number) /rand.generateRand([1, 2]))),
+        armorBonus : Math.ceil(rand.generateRand([0, value]) * ((i /number) /rand.generateRand([1, 2]))),
+    }
+}
+
+module.exports.generateEquipmentName = (stats) => {
+    let response = '';
+    if(stats.value >= 5 || (stats.attackBonus + stats.armorBonus + stats.connBonus) >= 5) {
+        response += `${proper.names[rand.generateRand([0, proper.names.length -1])]}'s `;
+        response += `${ adjs.list[rand.generateRand([0, adjs.list.length -1])]} `;
+    }
+    
+    if((stats.attackBonus > stats.connBonus) && stats.attackBonus > stats.armorBonus) {
+        response += `${equip.weapons[rand.generateRand([0, equip.weapons.length -1])]} `;
+        stats.type = 'weapon'; 
+    }
+    if((stats.armorBonus > stats.attackBonus) && (stats.armorBonus > stats.connBonus)){
+        response += `${equip.armor[rand.generateRand([0, equip.armor.length -1])]} `;
+        stats.type = 'armor'; 
+    }
+
+    if(stats.type === undefined) {
+        response += `${equip.trinket[rand.generateRand([0, equip.trinket.length -1])]} `;
+        stats.type = 'trinket';
+    }
+    response = response.trim();
+    return response;
 }
 
 module.exports.generateDungeons = async(number) => {

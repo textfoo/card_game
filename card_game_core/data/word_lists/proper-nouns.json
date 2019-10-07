@@ -1,5 +1,5 @@
 {
-    "holy_names" : [
+    "names" : [
         "Bolvar",
         "Darian",
         "Eldur",
@@ -12,18 +12,14 @@
         "Sammuel",
         "Stronghammer",
         "Wilhelm",
-        "Whiteshield"
-    ],
-    "unholy_names" : [
+        "Whiteshield",
         "Elfsbane",
         "Lor",
         "Mograine",
         "Savin",
         "Senturus",
         "Vicward",
-        "Zandros"
-    ],
-    "neutral" :[
+        "Zandros",
         "Noah",
         "Liam",
         "Mason",

@@ -2,11 +2,12 @@
 
 const dc = require('./data-context'); 
 
-//startup the event loop
+
 module.exports.setup = async() => {
     try {
         await dc.init(); 
-        await dc.generateEquipment(25); 
+        let equip = await dc.generateEquipment(25); 
+        console.log(JSON.stringify(equip, null, 4))
 
     }catch(error) {
         console.log(`setup | run | error : ${error}`);
